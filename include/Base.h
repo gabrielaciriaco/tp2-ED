@@ -14,6 +14,7 @@ class Base{
     void setNome(string nome);
     void setDistancia(int distancia);
     friend bool operator < (const Base& base1, const Base& base2);
+    friend bool operator > (const Base& base1, const Base& base2);
 };
 
 #endif

@@ -1,5 +1,8 @@
 #include "Base.h"
 #include "Heap.h"
+#include "Quick.h"
+#include "Insertion.h"
+#include "QuickOtimizado.h"
 
 Base *lerArquivo(char *nomeArquivo, int quantidadeDeLinhas) {
   Base *dadosBase = new Base[quantidadeDeLinhas];
@@ -29,6 +32,6 @@ int main(int argc, char *argv[]) {
   char *nomeArquivo = argv[1];
   Base *bases = lerArquivo(nomeArquivo, quantidadeDeLinhas);
 
-  heapSort(bases, quantidadeDeLinhas);
+  quickSortOtimizado(bases,0,quantidadeDeLinhas-1);
   return 0;
 }

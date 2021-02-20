@@ -1,11 +1,11 @@
 #include "../include/Heap.h"
 
-void trocaPosicaoItens (Base bases[], int indiceMaiorItem, int posicaoAtual ){
+void trocaPosicaoItens (Base bases[], int indiceBase1, int indiceBase2 ){
     Base baseTrocada;
 
-    baseTrocada = bases[indiceMaiorItem];
-    bases[indiceMaiorItem] = bases[posicaoAtual];
-    bases[posicaoAtual] = baseTrocada;
+    baseTrocada = bases[indiceBase1];
+    bases[indiceBase1] = bases[indiceBase2];
+    bases[indiceBase2] = baseTrocada;
 }
 void montaHeap(Base bases[], int tamanhoDaHeap, int posicaoAtual) {
   int indiceMaiorItem = posicaoAtual;

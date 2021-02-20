@@ -4,7 +4,6 @@
 
 using namespace std;
 
-void montaHeap(Base bases[], int heapSize, int currentItemPosition);
 void heapSort(Base bases[], int arraySize);
 
 #endif

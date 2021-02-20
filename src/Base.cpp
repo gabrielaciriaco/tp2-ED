@@ -22,3 +22,7 @@ void Base::setDistancia(int distancia){
 bool operator < (const Base& base1, const Base& base2) {
   return base1.distancia < base2.distancia;
 }
+
+bool operator > (const Base& base1, const Base& base2) {
+  return base1.distancia > base2.distancia;
+}
