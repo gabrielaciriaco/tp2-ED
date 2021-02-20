@@ -3,6 +3,7 @@
 #include "Quick.h"
 #include "Insertion.h"
 #include "QuickOtimizado.h"
+#include "Shell.h"
 
 Base *lerArquivo(char *nomeArquivo, int quantidadeDeLinhas) {
   Base *dadosBase = new Base[quantidadeDeLinhas];
@@ -32,6 +33,6 @@ int main(int argc, char *argv[]) {
   char *nomeArquivo = argv[1];
   Base *bases = lerArquivo(nomeArquivo, quantidadeDeLinhas);
 
-  quickSortOtimizado(bases,0,quantidadeDeLinhas-1);
+  shellSort(bases,quantidadeDeLinhas);
   return 0;
 }
