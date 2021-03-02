@@ -8,21 +8,21 @@ void trocaPosicaoItens (Base bases[], int indiceBase1, int indiceBase2 ){
     bases[indiceBase2] = baseTrocada;
 }
 void montaHeap(Base bases[], int tamanhoDaHeap, int posicaoAtual) {
-  int indiceMaiorItem = posicaoAtual;
+  int indiceMenorItem = posicaoAtual;
   int indiceEsquerda = 2 * posicaoAtual + 1;
   int indiceDireita = 2 * posicaoAtual + 2;
 
-  if (indiceEsquerda < tamanhoDaHeap && bases[indiceEsquerda] < bases[indiceMaiorItem]){
-    indiceMaiorItem = indiceEsquerda;
+  if (indiceEsquerda < tamanhoDaHeap && bases[indiceEsquerda] < bases[indiceMenorItem]){
+    indiceMenorItem = indiceEsquerda;
   } 
 
-  if (indiceDireita < tamanhoDaHeap && bases[indiceDireita] < bases[indiceMaiorItem]){
-    indiceMaiorItem = indiceDireita;
+  if (indiceDireita < tamanhoDaHeap && bases[indiceDireita] < bases[indiceMenorItem]){
+    indiceMenorItem = indiceDireita;
   } 
 
-  if (indiceMaiorItem != posicaoAtual) {
-    trocaPosicaoItens(bases,indiceMaiorItem,posicaoAtual);
-    montaHeap(bases, tamanhoDaHeap, indiceMaiorItem);
+  if (indiceMenorItem != posicaoAtual) {
+    trocaPosicaoItens(bases,indiceMenorItem,posicaoAtual);
+    montaHeap(bases, tamanhoDaHeap, indiceMenorItem);
   }
 }
 
